@@ -1,0 +1,36 @@
+{
+    "name":"GutenBox",
+    "version":"0.0.0",
+    "author":"Francesco Pepe",
+    "location":"Tropicalista/GutenBox#v0.0.0",
+    "homepage":"https://github.com/Tropicalista/GutenBox",
+    "documentation":"https://github.com/Tropicalista/GutenBox",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/Tropicalista/GutenBox"
+    },
+    "bugs":"https://github.com/Tropicalista/GutenBox/issues",
+    "slug":"GutenBox",
+    "shortDescription":"Short Module Description",
+    "description":"Short Module Description",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^5.0.0",
+        "testbox":"^3.0.0"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"tests/resources/app/coldbox/"
+    },
+    "scripts":{
+        "postVersion":"package set location='Tropicalista/GutenBox#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
